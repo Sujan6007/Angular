@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <h1>Data binding</h1>
+    <ul>
+        <li><a href="https://facebook.com">interpolation</a></li>
+        <li><a href="http://linkedin.in">PropertyBinding</a></li>
+        <!-- <li><a href="http://google.com"></a>Google</li> -->
+        <li><a href="https://bootstrap.com">EventBinding</a></li>
+        <li><a href="http://gmail.com">Two-wayBinding</a></li>
+    </ul>
+    <!-- <script>
+        var a = document.getElementById("n1").value
+    </script> -->
+<h1 style="text-align: center;">Hello this is Databinding</h1>
+<h3>1. interpolation </h3>
+<p> name ; {{name}}</p>
+<p>place: {{city}} </p>
+<p>Using function {{getDetails()}}</p>
+<div>
+<header> {{name}}.ltd</header>
+<article><p>
+The {{name}} company is established in the year {{year}}
+and {{name}} company is having more than 1000 employees,
+in 1999 company got huge share, and {{name}} got more poppular.
+</p></article>
+<article><p>
+The {{name}} company is established in the year {{year}}
+and {{name}} company is having more than 1000 employees,
+in 1999 company got huge share, and {{name}} got more poppular.
+</p></article>
+
+</div>
+<div>
+
+<div>
+    <h3>2)Property binding</h3>
+<h3 style="text-align: center; color: black;">Animal images</h3>
+<img src="{{source}}" alt="Rare Animal" height="{{high}}" width="{{lenth}}">
+<img src="{{source1}}" alt="Lion" height="{{high}}" width="{{lenth}}">
+</div>
+<h3 style="text-align: center;"> Assignment</h3>
+<p style="text-align: center;">Add two properties with string and number </p>
+<p>StringData: {{string1}}</p>
+<p>NumberData: {{number1}}</p>
+<p style="text-align: center;">Add a method called getAlldata()</p>
+<p>Message: {{getAlldata1()}}</p>
+<p style="text-align: center;">Adddtional</p>
+<p>Name {{uname}}</p>
+<p>Age {{age}}</p>
+<p>Personal details {{getPersonalDetails()}}</p>
+<hr>
+<input type="text" value="{{stringData}}">
+<p style="text-align: center;">Property binding to the DOM properties </p>
+<input [value]="stringData">
+<input [value]="number1">
+<button [disabled]="enable">click on me </button><br><br>
+<img [src]="source2" alt="tiger" height="{{high}}" width="{{lenth}}">
+</div>
+
+<div>
+    <h2>3) Event binding</h2>
+    <label for="n1">Firstname</label>
+    <input type="text" name="name" #n1>
+    <label for="n2">Lastname</label>
+    <input type="text" name="name" #n2>
+    <input type="button" value="check" (click)="demo(n1.value,n2.value)">
+    <p>Name {{val}}</p>
+</div>
+<div>
+    <h2>4) Two way data binding</h2>
+    <label for="n1">Username</label>
+    <input type="text" name="name" #Input>
+    <input type="button" value="check" [(ngModel)]="tname">
+    {{tname}}
+
+</div>
+</body>
+</html>
+
